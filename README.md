@@ -1,4 +1,4 @@
-# GAM-Modpack
+# GAM-Modpack 2
 This is my new Minecraft Modpack with custom scripts and maybe custom mods 
 
 ## About
