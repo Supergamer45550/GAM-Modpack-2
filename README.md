@@ -14,3 +14,4 @@ This Modpack has Crafttweaker to make custom scripts and also may have custom Mo
 ## ✨ Mods
 
 ## ✨ Ressourcepacks
+- Fresh Animations
