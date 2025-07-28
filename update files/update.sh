@@ -1,29 +1,52 @@
 #!/bin/bash
 
-echo "Do you want to install wget and unzip?"
-echo "1 = Yes"
-echo "2 = No"
+# Installer prompt
+echo "1 = Install wget and unzip"
+echo "2 = Skip"
 read -p "Your choice: " INSTALL_CHOICE
 
 if [ "$INSTALL_CHOICE" -eq 1 ]; then
-    echo "Installing wget and unzip..."
     sudo apt update
     sudo apt install -y wget unzip
 fi
 
-read -p "Paste the full path to your Minecraft mods folder: " MOD_FOLDER
+# Get mods folder path
+read -p "Minecraft mods folder path: " MOD_FOLDER
 
-ZIP_URL="https://supergamer45550.github.io/GAM-modpack-2-website/files/new_mods.zip"
+# Version selection
+echo "Choose version:"
+echo "1 = 1.4.0"
+echo "2 = 1.3.2"
+echo "3 = 1.3.1"
+echo "4 = 1.3.0"
+echo "5 = 1.2.0"
+echo "6 = Enter custom version"
+read -p "Your choice: " VERSION_CHOICE
 
+case "$VERSION_CHOICE" in
+	1) Version="1.4.0" ;;
+    2) VERSION="1.3.2" ;;
+    3) VERSION="1.3.1" ;;
+    4) VERSION="1.3.0" ;;
+    5) VERSION="1.2.0" ;;
+    6) read -p "Enter version manually (e.g., 1.4.0): " VERSION ;;
+    *) echo "Invalid choice. Exiting." && exit 1 ;;
+esac
+
+# Download and extract mods
+ZIP_URL="https://supergamer45550.github.io/GAM-modpack-2-website/files/$VERSION/new_mods.zip"
 TEMP_ZIP="/tmp/minecraft_mods.zip"
 
-echo "Downloading mods..."
+echo "Downloading mods for version $VERSION..."
 wget -O "$TEMP_ZIP" "$ZIP_URL"
 
-echo "Extracting mods into $MOD_FOLDER..."
-unzip -o "$TEMP_ZIP" -d "$MOD_FOLDER"
+if [ $? -ne 0 ]; then
+    echo "Download failed. Check if the version exists or if the URL is correct."
+    exit 1
+fi
 
-echo "Cleaning up..."
+echo "Extracting mods..."
+unzip -o "$TEMP_ZIP" -d "$MOD_FOLDER"
 rm "$TEMP_ZIP"
 
-echo "✅ Mods installed successfully!"
+echo "Mods installed successfully! 🎉"
