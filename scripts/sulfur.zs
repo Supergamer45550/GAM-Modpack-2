@@ -4,7 +4,7 @@
 craftingTable.addShapeless("sulfur_dust_recipe", <item:tfmg:sulfur_dust> * 9, [<item:tfmg:sulfur>]);
 
 //Dust to Block
-craftingTable.addShaped("remote", <item:storagenetwork:tfmg_sulfur_recipe>, [
+craftingTable.addShaped("tfmg_sulfur_recipe", <item:tfmg:sulfur>, [
     [<item:tfmg:sulfur_dust>, <item:tfmg:sulfur_dust>, <item:tfmg:sulfur_dust>],
     [<item:tfmg:sulfur_dust>, <item:tfmg:sulfur_dust>, <item:tfmg:sulfur_dust>],
     [<item:tfmg:sulfur_dust>, <item:tfmg:sulfur_dust>, <item:tfmg:sulfur_dust>]]);
