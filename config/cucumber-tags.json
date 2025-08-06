@@ -2,14 +2,14 @@
   "__comment": "Instructions: https://blakesmods.com/docs/cucumber/tags-config",
   "forge:ingots/electrum": "createaddition:electrum_ingot",
   "forge:silicon": "ae2:silicon",
-  "forge:ingots/aluminum": "null",
+  "forge:ingots/aluminum": "tfmg:aluminum_ingot",
   "forge:gems/apatite": "null",
-  "forge:ingots/constantan": "null",
+  "forge:ingots/constantan": "tfmg:constantan_ingot",
   "forge:ingots/brass": "create:brass_ingot",
   "forge:ingots/tungsten": "null",
-  "forge:ingots/silver": "null",
+  "forge:ingots/silver": "immersiveengineering:ingot_silver",
   "forge:ingots/mithril": "null",
-  "forge:dusts/saltpeter": "null",
+  "forge:dusts/saltpeter": "immersiveengineering:dust_saltpeter",
   "forge:ingots/tin": "mekanism:ingot_tin",
   "forge:ingots/steel": "mekanism:ingot_steel",
   "forge:ingots/iridium": "null",
@@ -28,5 +28,5 @@
   "forge:gems/peridot": "null",
   "forge:ingots/chrome": "null",
   "forge:ingots/uranium": "mekanism:ingot_uranium",
-  "forge:ingots/nickel": "null"
+  "forge:ingots/nickel": "tfmg:nickel_ingot"
 }
