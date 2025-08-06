@@ -15,3 +15,8 @@ This Modpack has Crafttweaker to make custom scripts and also may have custom Mo
 
 ## ✨ Ressourcepacks
 - Fresh Animations
+
+## Important
+- This Modpack won't get any new Releases
+- The Files will still get updatet, however you can now find Releases on Curseforge
+- Here you can find it: https://www.curseforge.com/minecraft/modpacks/gam-craft-2
